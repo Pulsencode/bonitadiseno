@@ -2336,3 +2336,154 @@ button:focus {
 
 
 }
+
+/* ===================================
+    Product Showcase Styles
+====================================== */
+
+.product-card {
+    background: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+    position: relative;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.product-image {
+    position: relative;
+    overflow: hidden;
+    background: #f8f9fa;
+}
+
+.product-image img {
+    transition: transform 0.3s ease;
+    object-fit: cover;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.05);
+}
+
+.product-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 102, 102, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.product-card:hover .product-overlay {
+    opacity: 1;
+}
+
+.product-actions {
+    text-align: center;
+}
+
+.product-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.product-info h4 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #1a1a1a;
+    font-weight: 600;
+}
+
+.product-info p {
+    font-size: 14px;
+    line-height: 1.4;
+    margin-bottom: 15px;
+    color: #666666;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: 700;
+    color: #ff6666;
+    font-family: 'Playfair Display', serif;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 767px) {
+    .product-card {
+        margin-bottom: 20px;
+    }
+    
+    .product-info {
+        padding: 15px;
+    }
+    
+    .product-info h4 {
+        font-size: 16px;
+    }
+    
+    .product-info p {
+        font-size: 13px;
+    }
+    
+    .price {
+        font-size: 18px;
+    }
+    
+    .product-overlay {
+        opacity: 1;
+        background: rgba(255, 102, 102, 0.8);
+    }
+    
+    .product-actions .btn {
+        font-size: 12px;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 575px) {
+    .product-card {
+        margin-bottom: 15px;
+    }
+    
+    .product-info {
+        padding: 12px;
+    }
+    
+    .product-info h4 {
+        font-size: 15px;
+    }
+    
+    .product-info p {
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+    
+    .price {
+        font-size: 16px;
+    }
+}
+
+/* Product section spacing */
+#jewelry, #clothing {
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+}
+
+@media (max-width: 767px) {
+    #jewelry, #clothing {
+        padding-top: 3rem;
+        padding-bottom: 2rem;
+    }
+}
