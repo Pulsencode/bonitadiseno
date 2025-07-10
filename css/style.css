@@ -2556,3 +2556,32 @@ button:focus {
         object-position: center;
     }
 }
+
+/* Responsive Contact Map Fixes */
+@media (max-width: 767px) {
+    .map-adress {
+        position: static;
+        width: 100%;
+        height: auto;
+        margin-bottom: 1rem;
+        top: auto;
+        left: auto;
+        box-shadow: none;
+        background: #fff;
+    }
+    .map-adress-details {
+        padding: 10px;
+        text-align: center;
+    }
+    .map-img {
+        width: 100%;
+        height: auto;
+        overflow: visible;
+        position: static;
+    }
+    .map-container iframe {
+        width: 100% !important;
+        height: 250px !important;
+        display: block;
+    }
+}
